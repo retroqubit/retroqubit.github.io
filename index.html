@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ellie — Computer Science undergraduate</title>
+<meta name="description" content="Computer Science undergraduate at Government Engineering College, Thrissur. Small, dependency-free tools for the browser.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>&#9679;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  /* Applied before paint so a dark-mode reload never flashes white. */
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Ellie
+    </a>
+
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+    </nav>
+
+    <button id="theme" class="btn btn-ghost btn-icon" type="button" aria-label="Toggle theme">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section id="top" class="wrap hero">
+    <span class="badge badge-outline">Available for internships</span>
+
+    <h1>Ellie</h1>
+
+    <p class="lead">
+      Computer Science undergraduate at <strong>Government Engineering College, Thrissur</strong>,
+      reading for a <strong>B.Tech in Computer Science and Engineering</strong>.
+    </p>
+
+    <p class="prose">
+      I build small tools that run entirely in the browser — parsers, editors and design
+      utilities with no framework, no build step and no dependencies. The interesting part
+      of each one is usually the thing underneath: an RFC 4180 reader that survives a comma
+      inside an address, a cubic-bezier solver that falls back to bisection when Newton's
+      method diverges, a path-data scanner that knows arc flags can be packed together.
+    </p>
+
+    <p class="prose">
+      I care about the parts people skip. Correct edge cases, honest error messages, keyboard
+      access, and interfaces that say what they did rather than reporting a single number.
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-outline" href="#about">More about me</a>
+    </div>
+  </section>
+
+  <section id="work" class="wrap section">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p class="muted">Eight browser tools. Each one is its own repository, its own design, and no shared framework between them.</p>
+    </div>
+    <div id="projects" class="grid"></div>
+  </section>
+
+  <section id="about" class="wrap section">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+
+    <div class="split">
+      <article class="card">
+        <div class="card-head">
+          <h3>How I work</h3>
+          <p class="card-desc">A few things that show up in everything above.</p>
+        </div>
+        <div class="card-body">
+          <ul class="list">
+            <li><strong>Write the engine first.</strong> Every tool starts with the parser or the solver, tested on its awkward cases, before a single pixel is placed.</li>
+            <li><strong>No dependencies unless they earn it.</strong> Eight projects, zero npm packages at runtime. It keeps the code readable and the pages fast.</li>
+            <li><strong>Say what happened.</strong> A tool that reports "42% smaller" is less useful than one that lists what it removed.</li>
+            <li><strong>Accessibility is not a pass at the end.</strong> Focus rings, contrast ratios and reduced motion are commits in the history, not a checklist.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Focus areas</h3>
+          <p class="card-desc">What I reach for most.</p>
+        </div>
+        <div class="card-body">
+          <div class="badges">
+            <span class="badge">JavaScript</span>
+            <span class="badge">CSS architecture</span>
+            <span class="badge">Parsers &amp; tokenisers</span>
+            <span class="badge">Browser APIs</span>
+            <span class="badge">Accessibility</span>
+            <span class="badge">Performance</span>
+            <span class="badge">Python</span>
+            <span class="badge">Git</span>
+            <span class="badge">Data structures</span>
+            <span class="badge">Design systems</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" class="wrap section">
+    <div class="section-head">
+      <h2>Education</h2>
+    </div>
+
+    <article class="card card-row">
+      <div class="card-head">
+        <div class="row-top">
+          <h3>Government Engineering College, Thrissur</h3>
+          <span class="badge badge-secondary">B.Tech</span>
+        </div>
+        <p class="card-desc">Computer Science and Engineering</p>
+      </div>
+      <div class="card-body">
+        <p class="muted small">
+          Coursework across data structures and algorithms, operating systems, computer
+          networks, database systems and software engineering, alongside the browser tooling
+          I build on my own time.
+        </p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p class="muted small">Built by hand — no framework, no build step.</p>
+    <p class="muted small mono">© 2026</p>
+  </div>
+</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
